@@ -1,0 +1,350 @@
+
+
+section#myGroup{
+       padding-left: 15px;
+    padding-right: 15px;
+        width: 100%;
+    padding: 20px;
+    background-color: #f5f7fa;
+   
+}
+
+
+.innerContainer{
+
+  padding-right: 45px;
+    padding-left:45px;
+}
+
+
+.cardGroup {
+      overflow: hidden;
+  cursor:pointer;
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+ width:230px;
+   height:230px;
+  
+  margin: 3rem;
+  position: relative;
+  
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+ 
+  
+}
+
+.cardGroup:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.18), 0 10px 10px rgba(0,0,0,0.18);
+}
+
+
+.cardGroup >.addgroupIcon{
+  color:#5d5c7c;
+	 padding-top:50px;
+font-size:65px;
+  line-height: .1;
+    -webkit-transition: all 0.3s linear 0s;
+    -moz-transition: all 0.3s linear 0s;
+    -ms-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
+   -webkit-transform: scale(.9);
+    -moz-transform: scale(.9);
+    transform: scale(.9);
+  
+
+}
+
+.cardGroup >.addgroupIcon>.addgroupText{
+  font-size:25px;
+  text-transform: capitalize;
+ font-weight:300;
+}
+
+
+
+.cardGroup >.cardImage img {
+    position:absolute;
+left:-50px;
+top:-50px;
+  -webkit-transition: all 0.3s linear 0s;
+    -moz-transition: all 0.3s linear 0s;
+    -ms-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
+	}
+
+
+.cardGroup >.cardimageDefault img {
+      -webkit-transform: scale(.9);
+    -moz-transform: scale(.9);
+    transform: scale(.9);
+    
+  -webkit-transition: all 0.3s linear 0s;
+    -moz-transition: all 0.3s linear 0s;
+    -ms-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
+	}
+
+
+.cardGroup:hover >.cardImage img,
+.cardGroup:hover >.cardimageDefault img,
+.cardGroup:hover >.addgroupIcon {
+    -webkit-transform: scale(.8);
+    -moz-transform: scale(.8);
+    transform: scale(.8);
+    opacity: .8;
+}
+
+.cardGroup >.cardImage .cardContent,.cardGroup >.cardimageDefault .cardContent{
+ 
+  position:absolute;
+  z-index:10;
+  background-color:#fff;
+  border: 1px solid #ddd;
+  width: 100%;
+  height:85px;
+  bottom:-22px;
+	
+   -webkit-transition: all 0.3s linear 0s;
+    -moz-transition: all 0.3s linear 0s;
+    -ms-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
+  
+}
+
+
+.cardGroup:hover >.cardImage .cardContent,.cardGroup:hover >.cardimageDefault .cardContent{
+  
+  bottom:0px;
+
+  
+}
+
+
+.cardGroup >.cardImage .cardContent>.cardPrice,.cardGroup >.cardimageDefault .cardContent >.cardPrice{
+ 
+  position:absolute;
+  background-color:#5d5c7c;
+  color:#fff;
+  border: 1px solid #ddd;
+  width: 35%;
+  height:100%;
+  right:0;
+  padding-left:10px;
+  padding-right:10px;
+  padding-top:13px;
+   -webkit-transition: all 0.3s linear 0s;
+    -moz-transition: all 0.3s linear 0s;
+    -ms-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
+  
+}
+
+.cardGroup:hover >.cardImage .cardContent>.cardPrice,
+.cardGroup:hover >.cardimageDefault .cardContent >.cardPrice{
+ 
+  position:absolute;
+  background-color:#5d5c7c;
+  color:#fff;
+  border: 1px solid #ddd;
+  width: 35%;
+  height:100%;
+  right:0;
+  padding-left:10px;
+  padding-right:10px;
+  padding-top:21px;
+   -webkit-transition: all 0.3s linear 0s;
+    -moz-transition: all 0.3s linear 0s;
+    -ms-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
+  
+}
+.cardGroup:hover >.cardImage .cardContent>#detailExample{
+
+	color:#5d5c7c;
+}
+
+
+
+.cardContent >.cardDetail,.cardimageDefault .cardContent.cardDetail{
+ font-size:12px;
+  position:absolute;
+  background-color:#fff;
+  color:#5d5c7c;
+  
+ padding-left:10px;
+  padding-right:10px;
+ 
+  width: 66%;
+  height:100%;
+ 
+   -webkit-transition: all 0.3s linear 0s;
+    -moz-transition: all 0.3s linear 0s;
+    -ms-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
+  
+}
+
+
+
+.cardDetail > .cardTitle  {
+  font-size:15px;
+  text-transform: capitalize;
+  padding-bottom:5px;
+  text-align:left;
+}
+
+.cardDetail > .progbarPercent  {
+  padding-bottom:50px;
+   padding-left:5px;
+  text-align:right;
+  
+}
+
+.cardDetail > .groupusersInfo{
+  
+   text-align:left;
+} 
+.cardDetail > .groupactiveTime  {
+   padding-left:9px;
+    text-align:right;
+
+}
+
+.cardDetail > .progbar  {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    width: 65%;
+    visibility: visible;
+    vertical-align: top;
+}
+
+
+.cardDetail > .progbar >.progbarEmpty {
+    position: relative;
+    top: 3px;
+    height: 12px;
+    overflow: visible;
+    border: solid 1px;
+    border-color: #efefef;
+  
+}
+
+
+
+.cardDetail >.progbar >.progbarEmpty >.progbarFill {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #f1f1f1;
+}
+
+.cardDetail >.progbar >.progbarEmpty >.progbarFill>.progbarfillUse {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #46bda4;
+}
+
+
+
+.border-card-radius { 
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px; 
+}
+
+
+
+
+.mygroupTxt{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.mygroupTxt h1{
+    font-size: 25px;
+    margin-top: 15px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+
+
+.cardGroup >.cardExample img {
+
+	width:130px;
+	padding-right:40px;
+	padding-top:0px;
+
+  
+
+	}
+
+
+	.cardGroup >.cardExample {
+	
+   width:60px;
+   height:60px;
+
+   	background-color:transparent;
+   	  -webkit-transition: all 0.3s linear 0s;
+    -moz-transition: all 0.3s linear 0s;
+    -ms-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
+
+	
+	}
+
+	.cardExample.card-radius {
+    	border-radius: 50px;
+    	overflow:hidden;
+    	margin-top:30px;
+    	margin-left:80px;
+    	text-align:center;
+   
+}
+
+
+#detailExample {
+    padding-left: 0;
+    width: auto;
+    font-size: 12px;
+    left: 60px;
+    background-color: #fff;
+    color: #5d5c7c;
+    height: 0;
+    padding-right: 10px;
+    position: absolute;
+    -webkit-transition: all 0.3s linear 0s;
+    -moz-transition: all 0.3s linear 0s;
+    -ms-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
+}
+
+#detailExample p{
+	  color: #000;
+	  font-size: 12px;
+	  text-transform: capitalize;
+	  left: 0;
+	  margin-left: -3px;
+	  /* position: absolute; */
+}
+
+#detailExample > .cardTitle {
+    font-size: 15px;
+    text-transform: capitalize;
+    text-align: left;
+    }
+
+ 

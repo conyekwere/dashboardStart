@@ -1,0 +1,46 @@
+@charset "UTF-8"; 
+/*------------------------------------------------------------------
+[Master Stylesheet]
+Project:Rondafel Stylesheet
+++++ Imports ++++
+++++ Main ++++
+++++ Mediaqueries ++++
+-------------------------------------------------------------------*/
+
+/****************************/
+/** Imports **/
+/****************************/
+
+@import url(login-signup.css);
+@import url(modals.css);
+@import url(animations.css);
+@import url(dashboard.css);
+@import url(newgroups.css);
+@import url(mygroup.css);
+@import url(newsboard.css);
+@import url(myaccount.css);
+
+
+
+
+
+
+body {
+  font: 'Roboto', sans-serif;
+          margin-top: 50px;
+ 
+    background-color: #f5f7fa;
+}
+a {
+    color: #5d5c7c;
+    text-decoration: none;
+     cursor:pointer;
+}
+
+
+#logo {
+    padding: 8px 10px;
+    cursor:pointer;
+}
+
+

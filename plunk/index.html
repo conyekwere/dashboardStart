@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+  <head>
+    <title>{{ Page.title() }} </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes" />
+  <!-- CSS (load bootstrap and animate.css) -->
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!--Favicon-->
+    <link rel="icon" type="image/png" sizes="32x32" href="http://www.staging.rondafel.com/img/fav/favicon-32x32.png" />
+    <!--Fonts - changed to Source Code Pro-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900i" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,300" rel="stylesheet" type="text/css" />
+    <!--css-->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <!-- apply our angular app to our site -->
+  <body  ng-controller="mainCtrl">
+    
+    <!-- MAIN CONTENT -->
+   
+    <div ui-view="">
+       <!-- THIS IS WHERE ARE CONTENT GOES ============================== -->
+      
+    </div>
+    <!-- JS (load angular, ui-router, and our custom js file) -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
+      <script data-require="angular-animate@*" data-semver="1.4.1" src="https://code.angularjs.org/1.4.1/angular-animate.js"></script>
+   
+      
+      
+    <script src="app.js"></script>
+    <script src="dashboard/myaccount.controller.js"></script>
+    <script src="dashboard/mygroups.controller.js"></script>
+    <script src="dashboard/newgroup.controller.js"></script>
+    <script src="dashboard/newsboard.controller.js"></script>
+    <script src="accountenter/login.controller.js"></script>
+    <script src="accountenter/signup.controller.js"></script>
+  </body>
+
+</html>
