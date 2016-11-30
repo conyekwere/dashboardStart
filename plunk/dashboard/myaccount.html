@@ -10,7 +10,7 @@
                        
                         <ol class="breadcrumb">
                             <li>
-                                 <a ui-href=".dashboard.mygroups">My Rondafel</a>
+                                 <a href="#/dashboard/mygroups">My Rondafel</a>
                             </li>
                             <li class="active">
                                 My Account
@@ -24,7 +24,7 @@
                 
                  
         
-         <div class="innerContainer" style="/* padding-right: 20px; *//* padding-left: 20px; */">
+         <div class="innerContainer" style="">
 
    <div class="row ">
 
@@ -37,9 +37,7 @@
           <div class="personalInfo ">
   <h4>Personal Info</h4>
 <div class="editInfo">
-  
-  
-
+ 
   
   
   	
@@ -49,46 +47,57 @@
 
 
 
-<div class="row">
 	<div class="editName   col-sm-12 col-md-4 col-lg-4     "> 
   			<h5 class="text-muted">
     		First Name
   			</h5>
       		<button class="btn" style="
-"> 			edit
+" ng-click="openName()"> 			edit
       		</button>
 
 
 
   
-		<input type="text" name="groupname" class="form-control input ng-pristine ng-empty ng-invalid ng-invalid-required ng-touched " ng-disable="editName()" ng-model="editName" ng-required="true" required="required">
+		<input type="text" name="groupname" class="form-control input ng-pristine ng-empty ng-invalid ng-invalid-required ng-touched " ng-disable="disabledName" ng-model="editName" ng-required="true" required="required">
    	</div>
-</div>
 
 
 
-<div class="row">
+
+<div class="clearfix visible-xs"></div>
 	<div class="editLast   col-sm-12 col-md-4 col-lg-4     "> 
   			<h5 class="text-muted">
     		Last Name
   			</h5>
       		<button class="btn" style="
-"> 			edit
+" ng-click="openLast()"> 			edit
       		</button>
 
 
 
   
-		<input type="text" name="groupname" class="form-control input ng-pristine ng-empty ng-invalid ng-invalid-required ng-touched " ng-model="editName" ng-required="true" required="required">
+		<input type="text" name="groupname" class="form-control input ng-pristine ng-empty ng-invalid ng-invalid-required ng-touched " ng-disable="disabledLast"  ng-model="editLast" ng-required="true" required="required">
    	</div>
 
 
 
-</div>
+    
+    <div class="clearfix visible-xs"></div>
+	<div class="editEmail   col-sm-12 col-md-4 col-lg-4     "> 
+  			<h5 class="text-muted">
+    		Email
+  			</h5>
+      		<button class="btn" style="
+" ng-click="openEmail()"> 			edit
+      		</button>
+
+        <input type="text" name="groupname" class="form-control input ng-pristine ng-empty ng-invalid ng-invalid-required ng-touched " ng-disable="disabledEmail"  ng-model="editEmail" ng-required="true" required="required">
+   	</div>
 
 
-<div class="row">
-	<div class="editPhoto  col-sm-12 col-md-4 col-lg-4     "> 
+<div class="clearfix visible-xs"></div>
+
+	<div class="editPhoto  col-sm-12 col-md-4 col-lg-4   "> 
   			<h5 class="text-muted">Profile Photo</h5>
       		
 
@@ -105,13 +114,13 @@
 
 
 
-</div>
 
 
 
 
-<div class="row">
-	<div class="editPwd   col-sm-12 col-md-4 col-lg-4     "> 
+
+<div class="clearfix visible-xs"></div>
+	<div class="editPwd   col-sm-12 col-md-4 col-lg-4   "> 
   			<h5 class="text-muted">Password</h5>
       		
 
@@ -129,7 +138,7 @@
 "> 			edit
       		</button>
    	</div>
-</div>
+
 
   
   
@@ -148,132 +157,48 @@
       </div>
         
         
-        <div class="row">
- 			 <div class=" mygroupTxt col-lg-12 text-center">
-     	       <h1>
-                           How people are using rondafel
-                        </h1>
-               </div>
-
-		</div>
-
-
-<div class="row   col-sm-12  col-md-12 col-lg-12 text-center ">
-  
-  
-  
+   <div class="row ">
 
 
 
+        <div class="  text-center ">
 
-<div class=" col-sm-6 col-md-4 col-md-push-1 col-lg-3  ">  
-          <div class=" cardGroup border-card-radius">
+<div class=" col-sm-12 col-md-12 col-lg-12  ">  
 
-            <div class=" cardExample card-radius ">
-
-              <img src="https://static.pexels.com/photos/66086/pexels-photo-66086.jpeg" alt="image" class="" width="100">
-                
-                <div class="cardContent">
-
-                  <div id="detailExample" class="cardDetail">
-                      <h4 class="cardTitle">Trip to Canada</h4>
-
-
-
-
-<p class="">3 Members</p>
-
-<p class="">$ 300 Contribution</p>
-
-<p class="">$ 3000 Group Value</p>
-                  </div>
-                    
-                </div>
-              
-
-                
+          <div class="accountFile ">
+  <h4>Accounts on File</h4>
+              <p>Please enter account infromation here. Actual contribution amounts will be determined when you join a group.<p>
 
               
-
-
-            </div>
+              <div class=" newaccountTxt col-lg-12 text-center">
+                        
+                        <i id="newaccountIcon" class="fa fa-bank fa-5x  "></i>
+                        
+                        <h3>
+                          Add Accounts to start contributing to funds.
+                        </h3>
+                        
+                        <p class="">
+                          Add up to four accounts.
+                        </p>
+                        
+                     <span class="col-lg-12 text-center ">
+                         <a href="" class="btn  btnnewAccount nav-item   " ng-click="addnewaccountOpen()">
+                             
+                             <i class="fa  fa-credit-card"></i>
+                              Add Account </a></span>
+                    </div>
+            
 
           </div>
- </div>
-
-
-
-
-<div class=" col-sm-6 col-md-4 col-md-push-1 col-lg-3  ">  
-          <div class=" cardGroup border-card-radius">
-
-            <div class=" cardExample card-radius ">
-
-              <img src="https://static.pexels.com/photos/66086/pexels-photo-66086.jpeg" alt="image" class="" width="100">
-                
-                <div class="cardContent">
-
-                  <div id="detailExample" class="cardDetail">
-                      <h4 class="cardTitle">Trip to Canada</h4>
-
-
-
-
-<p class="">3 Members</p>
-
-<p class="">$ 300 Contribution</p>
-
-<p class="">$ 3000 Group Value</p>
-                  </div>
-                    
-                </div>
-              
-
-                
-
-              
-
-
-            </div>
-
-          </div>
- </div><div class=" col-sm-6 col-md-4 col-md-push-1 col-lg-3  ">  
-          <div class=" cardGroup border-card-radius">
-
-            <div class=" cardExample card-radius ">
-
-              <img src="https://static.pexels.com/photos/66086/pexels-photo-66086.jpeg" alt="image" class="" width="100">
-                
-                <div class="cardContent">
-
-                  <div id="detailExample" class="cardDetail">
-                      <h4 class="cardTitle">Trip to Canada</h4>
-
-
-
-
-<p class="">3 Members</p>
-
-<p class="">$ 300 Contribution</p>
-
-<p class="">$ 3000 Group Value</p>
-                  </div>
-                    
-                </div>
-              
-
-                
-
-              
-
-
-            </div>
-
-          </div>
- </div>
-  
 </div>
 
+       
+        
+        
+        </div>
+
+      </div>
 
 
 

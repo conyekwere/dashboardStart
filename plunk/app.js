@@ -34,9 +34,12 @@ app.config(function($stateProvider, $urlRouterProvider){
                
             })
              .state('dashboard', {
-                url: '/mygroups',
+                url: '/dashboard',
                 templateUrl: 'dashboard/dashboard.view.html',
                 controller: function($rootScope,$state,$scope) {
+                    
+                    
+                    
                   
                   
                               $scope.isActive = false;
@@ -104,6 +107,17 @@ app.controller('mainCtrl', function($rootScope,$scope,$state, $modal) {
   
   
    $rootScope.hasnoGroup = true;
+    $rootScope.hasnoAccount = true;
+    
+     $scope.addnewaccountOpen = function (size) {
+
+    var modalInstance = $modal.open({
+      templateUrl: 'addnewAccount.html',
+      controller: 'addnewaccountCtrl',
+      size: size
+      
+        }); 
+  }; 
   
 
  
@@ -111,7 +125,7 @@ app.controller('mainCtrl', function($rootScope,$scope,$state, $modal) {
 
     var modalInstance = $modal.open({
       templateUrl: 'addnewGroup.html',
-      controller: 'ModalInstanceCtrl',
+      controller: 'addnewgroupCtrl',
       size: size
       
         }); 
@@ -120,7 +134,7 @@ app.controller('mainCtrl', function($rootScope,$scope,$state, $modal) {
 });
  
  
-app.controller('ModalInstanceCtrl', function ($rootScope,$scope,$state, $modalInstance) {
+app.controller('addnewgroupCtrl', function ($rootScope,$scope,$state, $modalInstance) {
 
  
  $scope.loadAccept = false;
@@ -144,6 +158,30 @@ app.controller('ModalInstanceCtrl', function ($rootScope,$scope,$state, $modalIn
     
 });
  
+ 
+ app.controller('addnewaccountCtrl', function ($rootScope,$scope,$state, $modalInstance) {
+
+ 
+ $scope.loadAccept = false;
+      $scope.addAccount = function () {
+      
+        
+         $rootScope.hasnoAccount = false;
+            $scope.loadAccept = !$scope.loadAccept;
+         
+           $state.go('dashboard.myaccount');
+            $modalInstance.dismiss('cancel');
+
+  };
+
+
+  $scope.cancelcreateAccount = function () {
+      $scope.loadAccept = !$scope.loadAccept;
+    $modalInstance.dismiss('cancel');
+  
+  };
+    
+});
  
  
   
