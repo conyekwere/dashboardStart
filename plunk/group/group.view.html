@@ -1,0 +1,191 @@
+      <!DOCTYPE html>
+
+      
+        <script type="text/ng-template" id="addnewGroup.html" >
+<!-- Modal -->
+
+    
+      <!-- Modal content-->
+      <div class=" newGroup modal-content col-lg-10">
+          
+            <form name="addnewGroup" ng-submit=" addnewGroup.$valid && addGroup()" role="form" novalidate >
+        <div class="modal-header noborder">
+          <button type="button" class="close"  ng-click="cancelcreateGroup()">&times;</button>
+          <h3 class=" capital modal-title">Create a new group</h3>
+        </div>
+    <div class="modal-body" >
+            
+          <p class=" capital text-muted">Group Photo</p>
+            
+            <p class="small">Maximum file size 25mb</p>
+            
+            <div class="row"> 
+           <img src="https://www.dropbox.com/s/xzlg9ab8aytbnf5/logo_icon.png?raw=1" class="col-lg-3  col-md-3 col-sm-3 col-xs-3">
+            
+                <input  class="col-lg-6  text-left" type = "file" file-model = "groupImage">
+            
+            </div>
+            
+            
+            <div class="form-group" ng-class="{ 'has-error': addnewGroup.groupname.$dirty && addnewGroup.groupname.$error.required }">
+              <p class=" capital text-muted">Group name*</p>
+             <input type="text" name="groupname"  class="form-control input" ng-model="groupName"   ng-required="true">
+            
+             <span ng-show="addnewGroup.groupname.$dirty && addnewGroup.groupname.$error.required" class="help-block">Group Name Required</span>
+            
+            </div>
+        
+        
+        <div class="form-group" ng-class="{ 'has-error': addnewGroup.grouppurpose.$dirty && addnewGroup.grouppurpose.$error.required }">
+              <p class=" capital text-muted">Group Purpose*</p>
+             <input type="text" name="grouppurpose" placeholder="What are you raising money for ?" class="form-control input" ng-model="groupPurpose"   ng-required="true">
+            
+             <span ng-show="addnewGroup.grouppurpose.$dirty && addnewGroup.grouppurpose.$error.required" class="help-block">Group Purpose Required</span>
+            
+            </div>
+        
+        <div class="form-group" ng-class="{ 'has-error': addnewGroup.groupamount.$dirty && addnewGroup.groupamount.$error.required }">
+              <p class=" capital text-muted">Member contribution amount in USD*</p>
+             <input type="text" name="groupamount" placeholder="$1000"   class="form-control input" ng-model="groupAmount" ng-required="true" real-time-currency>
+            
+             <span ng-show="addnewGroup.groupamount.$dirty && addnewGroup.groupamount.$error.required" class="help-block">Group Amount Required</span>
+            
+            </div>
+        
+            
+    </div>
+           
+                
+        <div class="modal-footer noborder text-left">
+                   <button type="submit" class="btn btnSubmit"    ng-disabled="addnewGroup.$invalid && loadAccept" >Create</button>
+            
+            
+          <button type="button" class="btn btnCancel ng-disabled="loadAccept"  ng-click="cancelcreateGroup()">Cancel</button>
+                                                                                                             
+        </div>
+        <img ng-if="loadAccept" src="data:image/gif;base64,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oASBAJIkOYhEsaJFig4iTrzIMaNEjh01grzoceNIjCJPohRI0CBChQwdQgwIACH5BAQDAAAALAkADAAOAAgAAAg2ACUFOqSiS51Hj+p0UXEokCRJVCJJnEiRysOIFDNahJhR48WOFT+ClLgR48iNAwseTLiwoaSAACH5BAQDAAAALAoADAAMAAgAAAgpADvAwROpoEE8cDoAMMjQIICFDRk+jCgRIsVIEy9itEgRgECCDRF2CAgAIfkEBAMAAAAsCgALAAwACgAACCsAG81QQLAgwRmNBERayLChAIUNIz6MKBEixYUTL2K0eDGjRo8dBRo0iDAgACH5BAQDAAAALAoACgAMAAwAAAgwAMHEwUCwIME4YFJEWsiwYQqFDSM+jCgRIsWFEy9itHgxo0aPHTlSBDlSoEGDCAMCACH5BAQDAAAALAkACgAOAAwAAAgzAI/QcECwoEEaRwJEWsiw4cIACh1KhChxYsSKDClizHhxo8aNkT567IhRZEmBBlM6QBgQACH5BAQDAAAALAkACgAOAAwAAAgzAHcQEkKwoEFCOwhEWsiw4UICCh1KhChxYsSKDClizHhxo8aNkT567IhRZEmBBlMKQRgQADs=" />
+
+
+                 
+       </form>
+      </div>
+   
+         </script>
+         
+      
+      <div id="wrapper" ng-class="{'collapsed': isActive}">
+
+        <!-- Navigation -->
+        <nav role="navigation" id ="navstyle"
+             class="navbar navbar-default navbar-fixed-top" 
+             >
+              
+                <a href="#/dashboard/mygroups" id="logo" class="navbar-brand" ng-class="{'collapsed': isActive}" ><img src="http://www.staging.rondafel.com/img/logo.png"></a>
+              
+              
+            
+          <div class="toggleMenu" ng-class="{'collapsed': isActive}" ng-click="menuClick()">
+              <a href="" class="menuPlace"><i class="fa fa-fw fa-outdent "></i>
+                <i class="fa fa-fw fa-indent "></i><span class=""> Menu</span></a>
+          </div>
+            <!-- Top Menu Items -->
+            
+            <div class="accountMenu">
+                <div class="accountmenuPlace">
+            <ul class="" style="">
+                
+                
+                <li class="dropdown">
+                    <a  ng-disabled="addgroup()" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        
+                        <span class="fa-stack fa-1x">
+              <i class="fa fa-circle fa-stack-2x "></i>
+              <i class="fa fa-user fa-stack-1x"></i>
+            </span>
+                         Christopher
+                        
+<!--                       {{user.firstName}}-->
+                        
+                        <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li >
+                            <a  ui-sref=".mygroups" ui-sref-active="active"><i class=""></i> My Group</a>
+                        </li>
+                        <li>
+                            <a ui-href=".myaccount"><i class=""></i> My Account</a>
+                        </li>
+                        <li>
+                        
+                         <li>
+                            <a ui-href=".newsboard"><i class=""></i> News Board</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a ng-click="logOut()"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+                
+                
+                </div>
+            </div>
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+          
+                <ul class="nav navbar-default navbar-nav side-nav" ng-class="{'collapsed': isActive}">
+                     <li ui-sref=".grouphome" ui-sref-active="active" class="sidelist">
+                    
+                    <img src="https://static.pexels.com/photos/66086/pexels-photo-66086.jpeg" class=" padding-none col-lg-12  col-md-12 col-sm-12  hidden-xs " >
+                         
+                    </li>
+                    
+                
+                    <li ui-sref=".grouphome" ui-sref-active="active" class="sidelist">
+                        <a href=""><i class="fa fa-fw fa-home"></i><span class="nav-title">  Group Home</span></a>
+                        <span></span>
+                    </li>
+                  
+                   <li ui-sref=".news" ui-sref-active="active" class="sidelist">
+                        <a href=""><i class="fa fa-fw fa-bullhorn"></i><span class="nav-title">  News</span></a>
+                        <span></span>
+                    </li>
+                  
+                   
+
+                    <li ui-sref=".polls" ui-sref-active="active" class="sidelist">
+                        <a href=""><i class="fa fa-fw fa-bar-chart"></i><span class="nav-title ">  Polls</span></a>
+                        <span></span>
+                    </li>
+
+                    <li ui-sref=".transactionhistory" ui-sref-active="active" class="sidelist">
+                        <a href=""><i class="fa fa-fw fa-list"></i><span class="nav-title ">  Transaction History</span></a>
+                        <span></span>
+                    </li><li ui-sref=".settings" ui-sref-active="active" class="sidelist">
+                        <a href=""><i class="fa fa-fw fa-cog"></i><span class="nav-title ">  Settings</span></a>
+                        <span></span>
+                    </li>
+                    
+                </ul>
+          
+            <!-- /.navbar-collapse -->
+        </nav>
+
+        
+  <main  class="dashboardview" ui-view>
+    
+            
+</main>
+        
+        
+       
+        
+        
+        
+            
+           
+            
+
+        
+        <!-- /#createnewgroup -->
+
+    </div>  <!-- /#wrapper -->

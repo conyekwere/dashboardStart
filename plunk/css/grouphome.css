@@ -1,0 +1,232 @@
+
+
+section#groupHome{
+       padding-left: 15px;
+    padding-right: 15px;
+        width: 100%;
+    padding: 20px;
+    background-color: #f5f7fa;
+   
+}
+
+
+/*
+@media(max-width:689px) {
+  
+    
+section#groupHome{
+
+     padding-left: 0px;
+     padding-right: 0px; 
+    width: 100%;
+     padding: auto; 
+    background-color: #f5f7fa;
+}
+    
+}
+*/
+
+
+.groupStatus {
+      overflow: hidden;
+ 
+  background: #fff;
+
+  display: inline-block;
+ width:300px;
+   height:135px;
+    
+    padding:5px;
+     margin-left: 1rem;
+ margin-bottom: 3rem;
+  position: relative;
+  
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+ 
+  
+}
+
+
+
+
+.statusTitle{
+    
+    float: left;
+}
+
+
+.statusAmount{
+     margin-top: -8px;
+    float: left;
+}
+
+
+
+.groupStatus  .progbarPercent  {
+  padding-bottom:50px;
+   padding-left:10px;
+  text-align:right;
+  
+}
+
+
+.groupStatus  .progbar  {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    width: 80%;
+    visibility: visible;
+    vertical-align: top;
+}
+
+
+.groupStatus .progbar >.progbarEmpty {
+    position: relative;
+    top: 3px;
+    height: 15px;
+    overflow: visible;
+    border: solid 1px;
+    border-color: #efefef;
+  
+}
+
+
+
+.groupStatus .progbar >.progbarEmpty >.progbarFill {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #f1f1f1;
+}
+
+.groupStatus .progbar >.progbarEmpty >.progbarFill>.progbarfillUse {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #46bda4;
+}
+
+.groupTable{
+  
+ margin-bottom: 3rem;
+ 
+    
+}
+
+.groupTable .table{
+    background-color: #fff;
+    
+    
+     
+    
+ 
+}
+
+
+
+
+
+
+.groupTable .table tr.title{
+    background-color: #5d5c7c;
+    color: #fff;
+     
+    
+ 
+}
+
+
+
+
+
+.groupTable  button.btn {
+    /* content: " "; */
+    /* display: inline-block; */
+  
+    padding: 5px 10px;
+    margin-left: 5px;
+   border-radius: 0px;
+    font-size: 10px;
+    
+    /* float: left; */
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #fff;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #444;
+    /* border: 5px solid transparent; */
+    /* border-radius: 40px; */
+    /* width: 30px; */
+}
+
+
+
+
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+     border-bottom: 1px solid #ddd;
+      border-top: 0px solid #ddd;
+    border-left: 0px solid #ddd;
+    border-right: 0px solid #ddd;
+     
+   
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+     
+    padding: 15px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+
+
+
+
+td .statusProgress  .progbarPercent  {
+  padding-bottom:50px;
+   padding-left:10px;
+  text-align:right;
+  
+}
+
+td .statusProgress  .progbar  {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    width: 50%;
+    visibility: visible;
+    vertical-align: top;
+}
+
+
+td .statusProgress .progbar >.progbarEmpty {
+    position: relative;
+    top: 3px;
+    height: 12px;
+    overflow: visible;
+    border: solid 1px;
+    border-color: #efefef;
+  
+}
+
+
+
+td .statusProgress .progbar >.progbarEmpty >.progbarFill {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #f1f1f1;
+}
+
+td .statusProgress .progbar >.progbarEmpty >.progbarFill>.progbarfillUse {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #46bda4;
+}

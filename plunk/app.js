@@ -93,6 +93,55 @@ app.config(function($stateProvider, $urlRouterProvider){
                  controller: 'newboardCtrl'
               
             })
+    
+    
+    .state('group', {
+                url: '/group',
+                templateUrl: 'group/group.view.html',
+                controller: function($rootScope,$state,$scope) {
+                    
+                    
+                     $scope.isActive = false;
+                              $scope.menuClick = function() {
+                                $scope.isActive = !$scope.isActive;
+                              };
+                    } 
+              
+            })
+            .state('group.grouphome', {
+                url: '/grouphome',
+                templateUrl: 'group/grouphome.html',
+                controller: 'grouphomeCtrl'
+                
+              
+            })
+            .state('group.news', {
+                url: '/news',
+                templateUrl: 'group/news.html',
+                  controller: 'NewsCtrl'
+              
+            })
+            
+            .state('group.polls', {
+                url: '/polls',
+                templateUrl: 'group/polls.html',
+                 controller: 'pollsCtrl'
+              
+            })
+            
+              .state('group.transactionhistory', {
+                url: '/transactionhistory',
+                templateUrl:'group/transactionhistory.html',
+                 controller: 'transactionhistoryCtrl'
+              
+            })
+    
+             .state('group.settings', {
+                url: '/settings',
+                templateUrl: 'group/settings.html',
+                 controller: 'settingsCtrl'
+              
+            })
             
   
 });

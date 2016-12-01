@@ -19,7 +19,9 @@ Project:Rondafel Stylesheet
 @import url(mygroup.css);
 @import url(newsboard.css);
 @import url(myaccount.css);
-
+@import url(group.css);
+@import url(grouphome.css);
+@import url(settings.css);
 
 
 
@@ -57,6 +59,6 @@ a {
     font-weight: bold;
 }
 .press{
-    letter-spacing: .002em;
+    letter-spacing: .1em;
 }
 

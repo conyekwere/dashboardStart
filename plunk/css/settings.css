@@ -1,0 +1,62 @@
+ .editgroupDecription   > .input[name=groupdecription] {
+    padding-top: 15px;
+    padding-bottom: 125px;
+}
+
+.editgroupDecription   > .input[type="text"] {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-color: #eee;
+    font-family: inherit;
+   ;
+    border: 1px none #CFCFCF;
+    outline: 0;
+    display: inline-block;
+    margin: 0 0 .8em 0;
+    margin-top: 6px;
+    padding-right: 2em;
+    height: 35px;
+    line-height: 2.428571;
+}
+
+.savedAccount > .input[type="text"] {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-color: #eee;
+    font-family: inherit;
+    padding: .8em 0 10px .8em;
+    border: 1px none #CFCFCF;
+    outline: 0;
+    display: inline-block;
+    margin: 0 0 .8em 0;
+    margin-top: 6px;
+    padding-right: 2em;
+    height: 35px;
+    line-height: 2.428571;
+}
+
+
+.editgroupDecription > button.btn {
+    /* content: " "; */
+    /* display: inline-block; */
+    margin-top: -15px;
+    padding: 2px 5px;
+    margin-left: 5px;
+    float: right;
+    font-size: 7px;
+    vertical-align: middle;
+    /* float: left; */
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #fff;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #999;
+    /* border: 5px solid transparent; */
+    /* border-radius: 40px; */
+    /* width: 30px; */
+}
