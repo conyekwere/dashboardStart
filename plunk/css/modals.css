@@ -94,3 +94,12 @@
             display: block;
             font-size: smaller;
         }
+
+        .padding-clean{
+            
+            
+    padding-right: 10px;
+    padding-left: 0px;
+
+
+        }

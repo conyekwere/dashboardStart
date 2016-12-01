@@ -62,7 +62,7 @@ section#myAccount {
 
 
  .personalInfo h4,
-.accountFile h4
+.accountFile h4.title
 {
    padding-top: 0px;
    padding-bottom: 0px;
@@ -71,7 +71,7 @@ section#myAccount {
  
 
  .personalInfo h4::after,
- .accountFile h4::after
+ .accountFile h4.title::after
 
 {
    
@@ -91,10 +91,19 @@ section#myAccount {
     font-size: 15px;
 }
 
-.newaccountTxt {
+.newaccountTxt,
+.mysavedAccounts
+{
+    
+     transition: 1s linear all;
+  -webkit-transition: 1s linear all;
+    
     padding-top: 25px;
     padding-bottom: 25px;
 }
+
+
+
 
 .newaccountTxt > #newaccountIcon {
     color: #e6e6e6;
@@ -115,7 +124,8 @@ background-color: #999;
 
  .editInfo .editName > .input[type="text"],
   .editInfo  .editLast > .input[type="text"],
-.editInfo  .editEmail > .input[type="text"]
+.editInfo  .editEmail > .input[type="text"],
+.savedAccount > .input[type="text"]
 
  {
     box-sizing: border-box;
@@ -150,13 +160,15 @@ background-color: #999;
 
  .editInfo  .editName > button.btn,
  .editInfo  .editLast > button.btn,
-.editInfo  .editEmail > button.btn
+.editInfo  .editEmail > button.btn,
+.savedAccount  > button.btn
 
  {
        /* content: " "; */
        /* display: inline-block; */
        margin-top: -15px;
        padding: 2px 5px;
+     margin-left:  5px;
        float: right;
        font-size: 7px;
        vertical-align: middle;
@@ -171,6 +183,20 @@ background-color: #999;
        -ms-user-select: none;
        user-select: none;
        background-color:#999;
+       /* border: 5px solid transparent; */
+       /* border-radius:40px; */
+       /* width:30px; */
+ }
+
+
+.editInfo  .editName > button.btn.cancel,
+ .editInfo  .editLast > button.btn.cancel,
+.editInfo  .editEmail > button.btn.cancel,
+.savedAccount  > button.btn.remove
+
+ { 
+  
+       background-color:#e34c4c;
        /* border: 5px solid transparent; */
        /* border-radius:40px; */
        /* width:30px; */

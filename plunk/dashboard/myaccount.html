@@ -166,11 +166,43 @@
 <div class=" col-sm-12 col-md-12 col-lg-12  ">  
 
           <div class="accountFile ">
-  <h4>Accounts on File</h4>
+  <h4 class ="title" >Accounts on File</h4>
               <p>Please enter account infromation here. Actual contribution amounts will be determined when you join a group.<p>
 
-              
-              <div class=" newaccountTxt col-lg-12 text-center">
+                <div  ng-if="!hasnoAccount" class=" mysavedAccounts col-lg-12 text-left">
+                  
+              <h4 class="text-muted capital" style="
+    padding-bottom: 10px;
+">
+    		my saved accounts
+  			</h4>
+                  
+                  <div class="clearfix visible-xs"></div>
+	<div class="savedAccount   col-sm-12 col-md-7 col-lg-7     "> 
+  			
+        <button class="btn remove" style="
+" ng-click="openLast()"> 			remove
+      		</button>
+
+      		<button class="btn edit" style="
+" ng-click="openLast()"> 			edit
+      		</button>
+        
+        	
+
+
+
+  
+		<input type="text" name="savedaccountinput" class="form-control input ng-pristine ng-empty ng-invalid ng-invalid-required ng-touched " ng-disable="disabledsavedAccount"  ng-model="editsavedAccount" ng-required="true" required="required">
+   	</div>
+                  
+                  
+                  
+
+
+                        
+                  </div>
+              <div  ng-if="hasnoAccount" class=" newaccountTxt col-lg-12 text-center">
                         
                         <i id="newaccountIcon" class="fa fa-bank fa-5x  "></i>
                         
@@ -188,6 +220,9 @@
                              <i class="fa  fa-credit-card"></i>
                               Add Account </a></span>
                     </div>
+              
+              
+            
             
 
           </div>

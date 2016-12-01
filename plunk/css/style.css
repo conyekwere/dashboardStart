@@ -48,4 +48,15 @@ a {
     text-transform: capitalize;
 }
 
+.upper{
+    
+    text-transform: uppercase;
+}
+
+.heavy{
+    font-weight: bold;
+}
+.press{
+    letter-spacing: .002em;
+}
 

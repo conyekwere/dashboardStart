@@ -9,7 +9,7 @@
       <!-- Modal content-->
       <div class=" newGroup modal-content col-lg-10">
           
-            <form name="addnewAccount" ng-submit=" addnewGroup.$valid && addAccount()" role="form" novalidate >
+            <form name="addnewAccount" ng-submit=" addAccount()" role="form" novalidate >
         <div class="modal-header noborder">
           <button type="button" class="close"  ng-click="cancelcreateAccount()">&times;</button>
           <h3 class=" capital modal-title">Add New Account</h3>
@@ -39,11 +39,31 @@
             
             </div>
         
-        <div class="form-group" ng-class="{ 'has-error': addnewGroup.groupamount.$dirty && addnewGroup.groupamount.$error.required }">
-              <p class=" capital text-muted">Member contribution amount in USD*</p>
-             <input type="text" name="groupamount" placeholder="$1000"   class="form-control input" ng-model="groupAmount" ng-required="true" real-time-currency>
+        
+        
+          <div class="form-group" ng-class="{ 'has-error': addnewAccount.cardnumber.$dirty && addnewAccount.cardnumber.$error.required  }">
+              <p class=" capital text-muted">Card Number*</p>
+             <input type="text" name="cardnumber"  class="form-control input" ng-model="cardNumber"   ng-required="true">
             
-             <span ng-show="addnewGroup.groupamount.$dirty && addnewGroup.groupamount.$error.required" class="help-block">Group Amount Required</span>
+             <span ng-show="addnewAccount.cardnumber.$dirty && addnewAccount.cardnumber.$error.required" class="help-block">Card Number Required</span>
+            
+            </div>
+        
+        
+        <div class="form-group col-lg-6 col-sm-6 col-xs-6     col-md-6 padding-clean" ng-class="{ 'has-error': addnewAccount.cvc.$dirty && addnewAccount.cvc.$error.required  }">
+              <p class=" capital text-muted">Expiration Date*</p>
+             <input type="text" name="expirationdate"  class="form-control input" ng-model="expirationDate"   ng-required="true">
+            
+             <span ng-show="addnewAccount.expirationdate.$dirty && addnewAccount.expirationdate.$error.required" class="help-block">Expiration Date Required</span>
+            
+            </div>
+        
+        
+        <div class="form-group col-lg-6 col-sm-6 col-xs-6    col-md-6 padding-clean"  ng-class="{ 'has-error': addnewAccount.cvc.$dirty && addnewAccount.cvc.$error.required  }">
+              <p class=" capital text-muted">CVC*</p>
+             <input type="text" name="cvc"  class="form-control input" ng-model="CVC"   ng-required="true">
+            
+             <span ng-show="addnewAccount.cvc.$dirty && addnewAccount.cvc.$error.required" class="help-block">CVC Required</span>
             
             </div>
         
@@ -52,7 +72,7 @@
            
                 
         <div class="modal-footer noborder text-left">
-                   <button type="submit" class="btn btnSubmit"    ng-disabled="addnewGroup.$invalid && loadAccept" >Save</button>
+                   <button type="submit" class="btn btnSubmit"    ng-disabled="addnewAccount.$invalid && loadAccept" >Save</button>
             
             
           <button type="button" class="btn btnCancel ng-disabled="loadAccept"  ng-click="cancelcreateAccount()">Cancel</button>

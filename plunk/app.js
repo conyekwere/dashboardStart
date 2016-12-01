@@ -168,8 +168,7 @@ app.controller('addnewgroupCtrl', function ($rootScope,$scope,$state, $modalInst
         
          $rootScope.hasnoAccount = false;
             $scope.loadAccept = !$scope.loadAccept;
-         
-           $state.go('dashboard.myaccount');
+     
             $modalInstance.dismiss('cancel');
 
   };
@@ -188,29 +187,6 @@ app.controller('addnewgroupCtrl', function ($rootScope,$scope,$state, $modalInst
  
 
 
-
-app.directive('uiSrefIf', function($compile) {
-  return {
-    scope: {
-      val: '@uiSrefVal',
-      if: '=uiSrefIf'
-    },
-    link: function($scope, $element, $attrs) {
-      $element.removeAttr('ui-sref-if');
-      $compile($element)($scope);
-      
-      $scope.$watch('if', function(bool) {
-        if (bool) {
-          $element.attr('ui-sref', $scope.val);
-        } else {
-          $element.removeAttr('ui-sref');
-          $element.removeAttr('href');
-        }
-        $compile($element)($scope);
-      });
-    }
-  };
-});
 
 
 app.directive('realTimeCurrency', function ($filter, $locale) {
